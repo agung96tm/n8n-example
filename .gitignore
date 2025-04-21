@@ -1,0 +1,5 @@
+.env
+.db-env
+k8s-env.yaml
+
+.idea
