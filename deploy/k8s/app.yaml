@@ -71,6 +71,10 @@ spec:
             - containerPort: 5678
               name: n8n
           env:
+            # -----------------------------------------------------------------------------
+            # Database
+            # https://docs.n8n.io/hosting/configuration/environment-variables/database/
+            # -----------------------------------------------------------------------------
             - name: DB_TYPE
               value: postgresdb
             - name: DB_POSTGRESDB_HOST
@@ -86,8 +90,31 @@ spec:
                 secretKeyRef:
                   name: n8n-env
                   key: DB_PASSWORD
+
+            # -----------------------------------------------------------------------------
+            # Host, Port and URL's
+            # https://docs.n8n.io/hosting/configuration/environment-variables/deployment/
+            # -----------------------------------------------------------------------------
+            - name: N8N_HOST
+              value: "n8n.gapai.id"
+            - name: N8N_PROTOCOL
+              value: "https"
+            - name: N8N_PUBLIC_API_BASE_URL
+              value: "https://n8n.example.com"
+            - name: N8N_EDITOR_BASE_URL
+              value: "https://n8n.example.com"
             - name: N8N_SECURE_COOKIE
               value: "false"
+
+            # -----------------------------------------------------------------------------
+            # Timezone and Localization
+            # https://docs.n8n.io/hosting/configuration/environment-variables/timezone-localization/
+            # -----------------------------------------------------------------------------
+            - name: N8N_TIMEZONE
+              value: "Asia/Jakarta"
+            - name: N8N_DEFAULT_LOCALE
+              value: "id"
+
           volumeMounts:
             - name: n8n-storage
               mountPath: /home/node/.n8n
