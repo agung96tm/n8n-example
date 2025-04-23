@@ -112,6 +112,8 @@ spec:
             # -----------------------------------------------------------------------------
             - name: N8N_TIMEZONE
               value: "Asia/Jakarta"
+            - name: GENERIC_TIMEZONE
+              value: "Asia/Jakarta"
             - name: N8N_DEFAULT_LOCALE
               value: "id"
 
