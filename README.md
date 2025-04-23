@@ -1,6 +1,6 @@
 # N8N Example
 
-This project sets up [n8n](https://n8n.io) — a powerful open-source workflow automation tool — using **Docker Compose** with a **PostgreSQL** database for persistent and scalable storage.
+This project sets up [n8n](https://n8n.io) — a powerful open-source workflow automation tool — using Docker Compose with a PostgreSQL database for persistent and scalable storage. It also includes configuration for Kubernetes deployment, enabling flexibility from local development to production-grade orchestration.
 
 ## How to Run (Local)
 
