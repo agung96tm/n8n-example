@@ -103,6 +103,8 @@ spec:
               value: "https://n8n.example.com"
             - name: N8N_EDITOR_BASE_URL
               value: "https://n8n.example.com"
+            - name: WEBHOOK_URL
+              value: "https://n8n.example.com"
             - name: N8N_SECURE_COOKIE
               value: "false"
 
